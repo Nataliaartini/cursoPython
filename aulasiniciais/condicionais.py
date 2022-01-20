@@ -40,3 +40,4 @@ try:
     print(f+s)
 except:
     print("digite um numero inteiro para realizar a conta")
+print(28 * "-")
