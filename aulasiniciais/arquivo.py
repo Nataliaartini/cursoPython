@@ -32,3 +32,17 @@ print("3² = ", 3**2)
 print("divisão inteira de 15/8 = ", 15//8)
 print("resto da divisão 15/8 = ", 15%8)
 print(25*"-")
+
+#aula 6
+nome = "Natalia"
+idade = 21
+altura = 1.60
+maior = idade > 18
+peso = 54
+print("Nome: ",nome)
+print("idade: ", idade)
+print("altura: ", altura)
+print("de maior?", maior)
+print("peso = ", peso ,"kg")
+print(" o IMC de ",nome, "é: ", peso/(altura*altura))
+print(25*"-")
