@@ -17,3 +17,5 @@ print(texto[:-1]) #exclui o ultimo
 print(texto[-1])
 print(texto[:7])
 print(texto[3:9])
+print(texto[::2]) #pula de 2 em 2 caracteres
+
