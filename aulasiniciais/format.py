@@ -7,4 +7,7 @@ nome = "Natalia"
 sobrenome= "Ferrandin"
 nomeCompleto= '{1}, {0}'.format(nome, sobrenome)
 print(nomeCompleto)
+print(nomeCompleto.lower())
+print(nomeCompleto.upper())
+print(nomeCompleto.title()) #primeiras letras maiusculas
 print(28 * "-")
