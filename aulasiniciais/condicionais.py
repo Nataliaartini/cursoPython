@@ -20,3 +20,12 @@ if user == login and password == senha:
     print("login efetuado com sucesso")
 else:
     print("usuário ou senha incorretos, tente novamente")
+
+#aula 10
+usuario = input("digite o seu usuário: ")
+tam = len(usuario)
+if tam < 8:
+    print("o nome de usuário deve ter no mínimo 8 caracteres")
+else:
+    print(f"usuário válido.")
+    print(len(usuario))
