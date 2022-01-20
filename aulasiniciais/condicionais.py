@@ -20,6 +20,7 @@ if user == login and password == senha:
     print("login efetuado com sucesso")
 else:
     print("usuário ou senha incorretos, tente novamente")
+print(28*"-")
 
 #aula 10
 usuario = input("digite o seu usuário: ")
@@ -29,3 +30,13 @@ if tam < 8:
 else:
     print(f"usuário válido.")
     print(len(usuario))
+print(28*"-")
+#aula 11
+f= input("digite o primeiro numero: ")
+s= input("digite o segundo numero: ")
+try:
+    f = int(f)
+    s = int(s)
+    print(f+s)
+except:
+    print("digite um numero inteiro para realizar a conta")
