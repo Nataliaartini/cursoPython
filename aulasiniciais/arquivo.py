@@ -15,7 +15,10 @@ print(5)
 print("isso é int \n")
 
 #aula 4
-print(type("Natalia"))
-print(type(10))
-print(type(25.6))
-print(type(5==5))
+print('Nome: Natalia', type("Natalia"))
+print("idade:", 21, type(21))
+print("altura:",1.60, type(1.60))
+print('é maior de idade?',21>=18 , type(21>=18))
+
+#aula 5
+
