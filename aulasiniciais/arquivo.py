@@ -53,3 +53,11 @@ print(f"{nome} tem {idade}, {altura} de altura e pesa {peso} kg")
 print(f"o IMC de {nome} é: {peso/(altura*altura):.2f}")
 print(f"{nome} nasceu no ano de {nasc}")
 print(28*"-")
+
+#aula 8
+nome=input("qual seu nome? ")
+idade=int(input("qual sua idade? "))
+nasc= 2022-idade
+print(f"olá {nome}")
+print(f"{nome} nasceu no ano de {nasc}")
+print(28*"-")
