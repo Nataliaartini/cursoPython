@@ -13,4 +13,7 @@ print(nomeCompleto.title()) #primeiras letras maiusculas
 print(28 * "-")
 
 texto = "Olá pessoal!"
-print(texto[:-1])
+print(texto[:-1]) #exclui o ultimo
+print(texto[-1])
+print(texto[:7])
+print(texto[3:9])
