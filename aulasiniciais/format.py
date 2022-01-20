@@ -11,3 +11,6 @@ print(nomeCompleto.lower())
 print(nomeCompleto.upper())
 print(nomeCompleto.title()) #primeiras letras maiusculas
 print(28 * "-")
+
+texto = "Olá pessoal!"
+print(texto[:-1])
