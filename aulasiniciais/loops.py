@@ -48,6 +48,42 @@ l1=[1,2,3]
 l2=[9,8,7]
 l1.extend(l2)
 print(l1)
+# print(max(l1))
+# print(min(l1))
 l2.append("lista")
 print(l2)
+print(28 * "-")
+soma = 0
+for valor in l1:
+    soma = soma + valor
+print(f"a soma de l1 é: {soma}")
+print(28 * "-")
+for i in l2:
+    print(f"os tipos de l2 são: {type(i)}")
+print(28 * "-")
 
+# joguinho
+secreta = "sherlock holmes"
+digitadas = []
+while True:
+    letra = input("digite uma letra: ")
+    if len(letra) > 1:
+        print("digite apenas 1 letra.")
+        continue
+    digitadas.append(letra)
+    if letra in secreta:
+        print("essa letra existe na palavra secreta")
+    else:
+        print("essa letra não existe na palavra secreta")
+        digitadas.pop()
+    aux = ''
+    for i in secreta:
+        if i in digitadas:
+            aux += i
+        else:
+            aux += "*"
+    print(aux)
+
+    if len(digitadas) > 5:
+        print("e aí, já sabe qual a palavra secreta?")
+        break
