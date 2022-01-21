@@ -16,4 +16,10 @@ msg = "Usuário logado" if logged_user else "Usuário precisa fazer login"
 print(msg)
 print(28*"-")
 
+nome = input("qual o seu nome? ")
+'''if nome:
+    print(nome)
+else:
+    print("campo 'nome' vazio")'''
+print(nome or None or False or "campo 'nome' vazio") #if ternario
 
