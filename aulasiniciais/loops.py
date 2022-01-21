@@ -84,6 +84,6 @@ while True:
             aux += "*"
     print(aux)
 
-    if len(digitadas) > 5:
+    if len(digitadas) >= 5:
         print("e aí, já sabe qual a palavra secreta?")
         break
