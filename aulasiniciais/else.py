@@ -41,4 +41,4 @@ lista = [
 ]
 for id,nome in enumerate(lista):
     print(id,nome)
-
+    print(lista[0][1])
