@@ -35,3 +35,13 @@ while contador < TAM:
         frase1 += letra
     print(f"{frase1}")
     contador +=1
+print(28 * "-")
+
+#aula 16
+for i in range (6,50,4):
+    print(i)
+print(28 * "-")
+for n in range (20,10,-1):
+    print(n)
+print(28 * "-")
+
