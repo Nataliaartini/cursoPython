@@ -6,11 +6,10 @@ while x<5:
         x+=1
         print(f"x= {x} y= {y}")
         print(28 * "-")
-'''while True:
+while True:
     a= int(input("digite um numero: "))
     b= int(input("digite um numero: "))
     o= input("digite a operação: ")
-    e= input("deseja sair? S | N: ")
 
     if o == "-":
         print(a-b)
@@ -18,12 +17,13 @@ while x<5:
         print(a+b)
     else:
         print("operação inválida")
-    if e == "S":
-        break'''
+    e = input("deseja sair? s | n: ")
+    if e == "s":
+        break
 print(28 * "-")
 
 #aula 15
-frase = "o rato roeu a roupa do rei de roma"
+frase = "o rato roeu"
 TAM= len(frase)
 contador = 0
 frase1 = ""
@@ -38,10 +38,16 @@ while contador < TAM:
 print(28 * "-")
 
 #aula 16
-for i in range (6,50,4):
+for i in range (6,20,4):
     print(i)
 print(28 * "-")
-for n in range (20,10,-1):
+for n in range (20,10,-2):
     print(n)
 print(28 * "-")
+l1=[1,2,3]
+l2=[9,8,7]
+l1.extend(l2)
+print(l1)
+l2.append("lista")
+print(l2)
 
