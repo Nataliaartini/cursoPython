@@ -28,3 +28,17 @@ for n in vetorcount:
         palavra = n
 print(28*"-")
 print(f"{palavra} {contagem}X, foi o que mais apareceu")
+print(28*"-")
+string2 = ".".join(vetorcount) #junta as palavras com .
+print(string2)
+for i,j in enumerate(vetorcount):
+    print(i,j)
+print(28 * "-")
+
+lista = [
+    [1,"- cliente 1"],
+    [3,"- cliente 3"],
+]
+for id,nome in enumerate(lista):
+    print(id,nome)
+
