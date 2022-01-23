@@ -1,5 +1,6 @@
 def saudacao (msg, nome):
     nome = nome.replace("a", "é")
-    print(msg, nome)
+    return f'{msg} {nome}'
 
-saudacao("Boa tarde", "Natalia")
+var = saudacao("Boa tarde", "Natalia")
+print (var)
