@@ -16,13 +16,16 @@ print(preco)
 
 def fizzbuzz(g):
     if g%3 == 0 and g%5 == 0:
-        return "fizzbuzz"
+        return f"fizzbuzz, {g}"
     if g%5 == 0:
-        return "buzz"
+        return f"buzz, {g}"
     if g%3 == 0:
-        return "fizz"
-
+        return f"fizz, {g}"
     return g
 teste = fizzbuzz(15)
 print(teste)
 
+from random import randint
+for i in range(2):
+    aleatorio = randint(0, 100)
+    print(fizzbuzz(aleatorio))
