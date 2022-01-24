@@ -25,3 +25,4 @@ def fizzbuzz(g):
         return g
 teste = fizzbuzz(15)
 print(teste)
+
