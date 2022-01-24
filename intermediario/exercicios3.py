@@ -5,7 +5,7 @@ def func1(funcao):
     return funcao()
 executa = func1(func)
 print(executa)
-
+print(28*"-")
 def um(nome):
     return f"oi {nome}"
 
