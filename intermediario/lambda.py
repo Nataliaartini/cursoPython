@@ -16,6 +16,6 @@ lista = [
 
 #lista.sort(key=dizlugar) - ordena pelo menor preco
 lista.sort(key=lambda item: [1], reverse=True) #aqui o lambda elimina uma função só pra retornar um indice
-print(decrescente)
+print(lista)
 '''pode ser usado a funcao print sorted lista com o lambda que é o mesmo resultado mas sem alterar lista original'''
 
