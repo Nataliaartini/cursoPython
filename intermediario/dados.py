@@ -10,8 +10,8 @@ produtos = [
     {"nome": "p9", "preco": 5},
     {"nome": "p10", "preco": 18.8},
     {"nome": "p11", "preco": 89},
-    {"nome": "p12", "preco": 122,85},
-    {"nome": "p13", "preco": 61,2},
+    {"nome": "p12", "preco": 122.85},
+    {"nome": "p13", "preco": 61.2},
 ]
 pessoas = [
     {"nome": "beatriz", "idade": 15},
