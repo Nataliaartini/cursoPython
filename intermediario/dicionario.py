@@ -45,3 +45,41 @@ d4.pop("c3")
 print(d4)
 d4.update(d2)
 print(d4)
+print(28*"-")
+
+perguntas = {
+    "pergunta 1": {
+        "pergunta": "quanto é 2²?",
+        "respostas": {
+            "a-": "2",
+            "b-": "4",
+            "c-": "6",
+        },
+        "resposta_certa": "b",
+    },
+    "pergunta 2":
+        {
+            "pergunta": "resolva a conta: 9+3*4",
+            "respostas": {
+                "a-": "23",
+                "b-": "48",
+                "c-": "21",
+            },
+            "resposta_certa": "c",
+        },
+}
+acertos = 0
+for chavep, chaver in perguntas.items(): #iterando sobre o dicionario com as perguntas
+    print(f"{chavep}: {chaver['pergunta']}")
+    for respkey, respvalue in chaver["respostas"].items(): #iterando sobre o dicionario com as respostas
+        print(f"[{respkey}]: {respvalue}")
+    responda = input("resposta: ")
+    if responda == chaver["resposta_certa"]:
+        print("Parabéns!")
+        acertos+=1
+    else:
+        print("ops não foi dessa vez")
+pergunta = len(perguntas)
+porcentagem = acertos / pergunta * 100
+print(f"você acertou {acertos} respostas")
+print(f"isso é {porcentagem}%")
