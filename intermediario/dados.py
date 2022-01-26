@@ -16,13 +16,13 @@ produtos = [
 pessoas = [
     {"nome": "beatriz", "idade": 15},
     {"nome": "duda", "idade": 23},
-    {"nome": "tiago", "idade": 18},
-    {"nome": "alice", "idade": 60},
-    {"nome": "enzo", "idade": 51},
-    {"nome": "janaina", "idade": 21},
+    {"nome": "tiago", "idade": 13},
+    {"nome": "alice", "idade": 10},
+    {"nome": "enzo", "idade": 6},
+    {"nome": "janaina", "idade": 29},
     {"nome": "ana paula", "idade": 32},
     {"nome": "natasha", "idade": 26},
     {"nome": "anderson", "idade": 18},
-    {"nome": "tuane", "idade": 30},
+    {"nome": "tuane", "idade": 12},
 ]
 lista = [1,2,3,4,5,6,7,8,9,10]
