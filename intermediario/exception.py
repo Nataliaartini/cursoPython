@@ -32,3 +32,20 @@ try:
     print(divide(2,0))
 except ValueError as error:
     print(error)
+print(45*"-")
+
+def convert(valor):
+    try:
+        valor = int(valor)
+        return valor
+    except ValueError:
+        try:
+            valor = float(valor)
+            return valor
+        except ValueError:
+            pass
+numero = convert(input("digite um numero:"))
+if numero is None:
+    print("isso não é um numero")
+else:
+    print(numero + 9)
