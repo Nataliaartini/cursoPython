@@ -35,3 +35,19 @@ with open("arquivo.txt", "a+") as file3:#cada vez que executa adiciona o que est
     file3.seek(0)
     print(file3.read())
 #para remover só importar modulo os e usar funcao remove e o arquivo
+
+import json
+d1 = {
+    "pessoa1": {
+        "nome": "Natalia",
+        "idade": 20,
+    },
+    "pessoa2": {
+        "nome": "natan",
+        "idade": 25,
+    },
+}
+d1_json = json.dumps(d1, indent = True)
+
+with open("using.json", "w+") as arquivo:
+    arquivo.write(d1_json)
