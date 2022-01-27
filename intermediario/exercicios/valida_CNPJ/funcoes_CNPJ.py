@@ -1,11 +1,12 @@
 import re
+import random as rd
 
 REGRESSIVOS = [6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2]
 
 
 def valida(cnpj):
     cnpj = rm_pontuacao(cnpj)
-    print("\n",cnpj)
+    print("\n", cnpj)
     try:
         if not_sequencia(cnpj):
             print("CNPJ inválido, não pode ser sequencial")
@@ -52,3 +53,15 @@ def not_sequencia(cnpj):
 
 def rm_pontuacao(cnpj):
     return re.sub(r"[^0-9]", "", cnpj)
+
+def gera():
+    primeiro_digito = rd.randint(0,9)
+    segundo_digito = rd.randint(0,9)
+    sc_bloco = rd.randint(100,999)
+    td_bloco = rd.randint(100,999)
+    qrt_bloco = "0001"
+    inicio_cnpj = f"{primeiro_digito}{segundo_digito}{sc_bloco}{td_bloco}{qrt_bloco}00"
+    new_cnpj = calcula(inicio_cnpj, 1)
+    new_cnpj = calcula(new_cnpj, 2)
+
+    return new_cnpj
