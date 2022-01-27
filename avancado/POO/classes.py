@@ -1,8 +1,11 @@
 import datetime
 import random as rd
+
+
 class Pessoa:
     print("\n")
     ano_atual = int(datetime.datetime.strftime(datetime.datetime.now(), "%Y"))
+
     def __init__(self, nome, idade, comendo=False, falando=False):
         self.nome = nome
         self.idade = idade
@@ -67,7 +70,7 @@ print(p3.nome, p3.idade)
 p3.nascimento()
 print(f"Ano: {Pessoa.ano_atual}")
 
-print(45*"*")
+print(45 * "*")
 p1.falar("POO")
 p1.comer("macarrão")
 p1.parar_comer()
@@ -77,7 +80,7 @@ p1.falar("POO")
 p1.comer("macarrão")
 p1.parar_comer()
 p1.falar("POO")
-print(45*"*")
+print(45 * "*")
 p2.falar("BBB")
 p2.parar_comer()
 p2.parar_falar()
