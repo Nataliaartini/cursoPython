@@ -87,3 +87,16 @@ p2.parar_falar()
 p2.comer("alface")
 p2.comer("geleia")
 print(p2.nascimento())
+print(45 * "*")
+
+
+class A:
+    q = 123
+
+    def __init__(self):
+        self.q = 321
+
+
+a1 = A()
+print(a1.q)
+print(A.q)
