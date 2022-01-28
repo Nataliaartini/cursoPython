@@ -12,7 +12,7 @@ class Produto:
 
     @nome.setter
     def nome(self, valor):
-        self._nome = valor.title(  )
+        self._nome = valor.title()
 
     # getter
     @property
@@ -34,3 +34,26 @@ print(p1.nome, p1.preco)
 p2 = Produto("traduzindo sonhos pro jogo do bicho", 30)
 p2.desconto(5)
 print(p2.nome, p2.preco)
+
+
+class Pessoa:
+    def __init__(self, nome):
+        self._nome = nome  # esse atributo só serve pra salvar o valor utilizado no setter e getter
+
+    @property
+    def nome(self):
+        return self._nome  # com o atributo
+
+    @nome.setter
+    def nome(self, nome):
+        self._nome = nome
+
+    @property
+    def sobrenome(self):
+        return "Pereira"
+
+
+p1 = Pessoa("Bernardino")
+# p1.nome = "ricardo" #vai mudar o valor de atributo na def init
+print(p1.nome)  # continua com o valor do setter enquanto o return de property nao tiver atributo
+print(p1.sobrenome)
