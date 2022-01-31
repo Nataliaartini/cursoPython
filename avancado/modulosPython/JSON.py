@@ -1,4 +1,4 @@
-import dados
+from dados import * 
 import json
 
 """DUMPS / Dump
@@ -27,11 +27,11 @@ null	        None """
 
 #Converte um dicionário em JSON
 #útil para salvar informações de qualquer tipo
-dados1 = json.dumps(dados.clientes_dicionario, indent=4)
+dados1 = json.dumps(clientes_dicionario, indent=4)
 
 #Converte JSON em um dicionário
 # útil para carregar informações de qualquer tipo
-dados1 = json.loads(dados.clientes_json)
+dados1 = json.loads(clientes_json)
 print(dados1)
 
 # Exporta dicionário para arquivo JSON
