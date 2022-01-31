@@ -1,9 +1,11 @@
 import os
+import shutil
 
-path_finder = r"/home"
-file_finder = ""
+caminho_original = r"/home"
+novo_caminho = r"/home/ballke-dev/snap"
+#file_finder = "notas.pub"
 
-for root, directs, files in os.walk(path_finder):
+for root, directs, files in os.walk(caminho_original):
     for file in files:
         if file_finder in file:
             caminho_completo = os.path.join(root, file)
