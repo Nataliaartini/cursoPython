@@ -37,3 +37,7 @@ def novoArquivo(arq, mode):
 
 with novoArquivo("abc.txt", "w") as newArquivo:
     newArquivo.write ("primeira linha")
+
+import encapsulamento
+help(encapsulamento)
+"""exemplo de como acessar documentação de um código"""
