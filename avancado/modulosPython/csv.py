@@ -1,6 +1,3 @@
-import imp
-
-
 import csv
 
 with open("clientes.csv", "r") as arquivo:
