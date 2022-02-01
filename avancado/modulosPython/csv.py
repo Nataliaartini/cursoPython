@@ -1,7 +1,6 @@
 import csv
 
 with open("clientes.csv", "r") as arquivo:
-    dados = csv.reader(arquivo)
     dados = [x for x in csv.DictReader(arquivo)]
 
 with open('cliente2.csv', 'w') as arquivo:
