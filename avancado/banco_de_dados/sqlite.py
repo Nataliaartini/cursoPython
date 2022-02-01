@@ -11,7 +11,7 @@ cursor = conexao.cursor()
 
 cursor.execute("INSERT INTO clientes (nome, peso) VALUES (?, ?)", ("Nathaly", 55.2))
 cursor.execute("INSERT INTO clientes (nome, peso) VALUES (:nome, :peso)", {"nome": "Eduarda", "peso": 65.9})
-cursor.execute("INSERT INTO clientes VALUES (:id, :nome, :peso),",
+cursor.execute("INSERT INTO clientes VALUES (:id, :nome, :peso)",
                {"id":None, "nome": "Daniel", "peso": 84.3}
                )
 
