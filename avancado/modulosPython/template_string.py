@@ -10,3 +10,4 @@ with open ("template_email.html", "r") as html:
     corpo_msg = template.safe_substitute(nome = "Mago Supremo", data = data_atual)
 print(corpo_msg)
 
+
