@@ -1,0 +1,10 @@
+passos para criar projeto Django
+
+python3 manage.py startapp <nome>
+em settings coloca a classe criada e em urls define o path e o include diretorio
+na pasta criada cria o arquivo urls  importa django.urls path e o . views
+dentro do arquivo urls cria o path para acesso da pagina
+dentro de views cria o metodo com request e o que deseja mostrar na pagina
+
+python3 manage.py runserver
+na pagina que abrir coloca /<nome> e o definido na url e pronto
