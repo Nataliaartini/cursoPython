@@ -1,5 +1,6 @@
 passos para criar projeto Django
 
+django-admin startproject <nome> .
 python3 manage.py startapp <nome>
 em settings coloca a classe criada e em urls define o path e o include diretorio
 na pasta criada cria o arquivo urls  importa django.urls path e o . views
