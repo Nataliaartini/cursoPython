@@ -6,8 +6,8 @@ from contextlib import contextmanager
 def conecta():
     conexao = pymysql.connect(
         host='127.0.0.1',
-        user='cursopython',
-        password='cursopython@123',
+        user='GERALMENTE ROOT',
+        password='TUA SENHA AQUI',
         db='clientes',
         charset='utf8mb4',
         cursorclass=pymysql.cursors.DictCursor
