@@ -1,0 +1,6 @@
+Para rodar projeto new site, entrar no diretorio new site e dar runserver
+
+Para rodar projeto agenda, dar runserver pelo diretorio apenas_django
+
+arquivos do projeto agenda estão no diretorio apenas_django (agenda, contatos e templates)
+dentro do diretorio new site são arquivos que rodam o projeto site (about, example,home, newsite e paginas)
