@@ -23,7 +23,7 @@
             {% for contato in contatos %}
                 <tr>
                     <td>
-                        <a href="#">{{contato.nome}}</a></body></td>
+                        <a href="{%url 'ver_contato' contato.id%}">{{contato.nome}}</a></body></td>
                         <td><FONT COLOR="#B0C4DE">{{contato.sobrenome}}</FONT></td>
                         <td><FONT COLOR="#B0C4DE">{{contato.telefone}}</FONT></td>
                         <td><FONT COLOR="#B0C4DE">{{contato.categoria}}</FONT></td>
