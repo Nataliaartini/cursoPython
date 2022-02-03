@@ -1,34 +1,32 @@
 {% extends 'base.html' %}
 {%block 'content'%}
-    <h1 class="mt-5">Minha agenda</h1>
-        <style>
-                body {
-                font-size : 20px;
-                background: #1C1C1C;
-                color: #ADD8E6;
-                link: #BA55D3;
-                }
-        </style>
+<h1 class="mt-5">Minha agenda</h1>
+<style>
+    body {
+    font-size : 20px;
+    background: #1C1C1C;
+    color: #ADD8E6;
+    }
+</style>
 
-    <table class="table">
-        <thead>
-        <tr>
-            <th><FONT COLOR="#836FFF">Nome</FONT></th>
-            <th><FONT COLOR="#836FFF">Sobrenome</FONT></th>
-            <th><FONT COLOR="#836FFF">Telefone</FONT></th>
-            <th><FONT COLOR="#836FFF">Categoria</FONT></th>
-        </tr>
-        </thead>
-        <tbody>
-            {% for contato in contatos %}
-                <tr>
-                    <td>
-                        <a href="{%url 'ver_contato' contato.id%}">{{contato.nome}}</a></body></td>
-                        <td><FONT COLOR="#B0C4DE">{{contato.sobrenome}}</FONT></td>
-                        <td><FONT COLOR="#B0C4DE">{{contato.telefone}}</FONT></td>
-                        <td><FONT COLOR="#B0C4DE">{{contato.categoria}}</FONT></td>
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+<table class="table">
+    <thead>
+    <tr>
+        <th><FONT COLOR="#836FFF">Nome</FONT></th>
+        <th><FONT COLOR="#836FFF">Sobrenome</FONT></th>
+        <th><FONT COLOR="#836FFF">Telefone</FONT></th>
+        <th><FONT COLOR="#836FFF">Categoria</FONT></th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for contato in contatos %}
+    <tr>
+        <td><a href="{% url 'ver_contato' contato.id %}">{{contato.nome}}</a></td>
+        <td><FONT COLOR="#7DCCFF">{{contato.sobrenome}}</FONT></td>
+        <td><FONT COLOR="#7DCCFF">{{contato.telefone}}</FONT></td>
+        <td><FONT COLOR="#7DCCFF">{{contato.categoria}}</FONT></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
 {%endblock%}
