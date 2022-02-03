@@ -1,41 +1,34 @@
 {% extends 'base.html' %}
 {%block 'content'%}
-<h1 class="mt-5">Minha agenda</h1>
+    <h1 class="mt-5">Minha agenda</h1>
+        <style>
+                body {
+                font-size : 20px;
+                background: #1C1C1C;
+                color: #ADD8E6;
+                link: #BA55D3;
+                }
+        </style>
 
-<table class="table">
-    <thead>
-    <tr>
-        <th>Nome</th>
-        <th>Sobrenome</th>
-        <th>Telefone</th>
-        <th>Categoria</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>
-            <a href="#"> João</a>
-        </td>
-        <td>Miranda</td>
-        <td>35 9 5555-5555</td>
-        <td>Família</td>
-    </tr>
-    <tr>
-        <td>
-            <a href="#"> Leandro</a>
-        </td>
-        <td>Moreira</td>
-        <td>35 9 8888-5555</td>
-        <td>Família</td>
-    </tr>
-    <tr>
-        <td>
-            <a href="#"> Fátima</a>
-        </td>
-        <td>Oliveira</td>
-        <td>35 9 9999-4352</td>
-        <td>Conhecidos</td>
-    </tr>
-    </tbody>
-</table>
+    <table class="table">
+        <thead>
+        <tr>
+            <th><FONT COLOR="#836FFF">Nome</FONT></th>
+            <th><FONT COLOR="#836FFF">Sobrenome</FONT></th>
+            <th><FONT COLOR="#836FFF">Telefone</FONT></th>
+            <th><FONT COLOR="#836FFF">Categoria</FONT></th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for contato in contatos %}
+                <tr>
+                    <td>
+                        <a href="#">{{contato.nome}}</a></body></td>
+                        <td><FONT COLOR="#B0C4DE">{{contato.sobrenome}}</FONT></td>
+                        <td><FONT COLOR="#B0C4DE">{{contato.telefone}}</FONT></td>
+                        <td><FONT COLOR="#B0C4DE">{{contato.categoria}}</FONT></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 {%endblock%}
