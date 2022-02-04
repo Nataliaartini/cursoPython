@@ -12,6 +12,7 @@
     <table class="table">
         <thead>
         <tr>
+            <th><FONT COLOR="#836FFF">ID</FONT></th>
             <th><FONT COLOR="#836FFF">Nome</FONT></th>
             <th><FONT COLOR="#836FFF">Sobrenome</FONT></th>
             <th><FONT COLOR="#836FFF">Telefone</FONT></th>
@@ -20,14 +21,13 @@
         </thead>
         <tbody>
         {% for contato in contatos %}
-            {% if contato.mostrar %}
             <tr>
-                <td><a href="{% url 'ver_contato' contato.id %}">{{contato.nome}}</a></td>
-                <td><FONT COLOR="#7DCCFF">{{contato.sobrenome}}</FONT></td>
-                <td><FONT COLOR="#7DCCFF">{{contato.telefone}}</FONT></td>
-                <td><FONT COLOR="#7DCCFF">{{contato.categoria}}</FONT></td>
-            </tr>
-            {%endif%}
+            <td><FONT COLOR="#7DCCFF">{{contato.id}}</FONT></td>
+            <td><a href="{% url 'ver_contato' contato.id %}">{{contato.nome}}</a></td>
+            <td><FONT COLOR="#7DCCFF">{{contato.sobrenome}}</FONT></td>
+            <td><FONT COLOR="#7DCCFF">{{contato.telefone}}</FONT></td>
+            <td><FONT COLOR="#7DCCFF">{{contato.categoria}}</FONT></td>
+        </tr>
         {% endfor %}
         </tbody>
     </table>
