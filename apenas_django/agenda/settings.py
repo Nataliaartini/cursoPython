@@ -1,3 +1,5 @@
+from django.contrib.messages import constants
+
 """
 Django settings for agenda project.
 
@@ -15,7 +17,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
@@ -26,7 +27,6 @@ SECRET_KEY = 'bgbbj-zt3^ka7w3032iigwng_mt4%x#=v$t31d-y7sd3nf#dj5'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -70,7 +70,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'agenda.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
@@ -80,7 +79,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -100,7 +98,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
@@ -114,7 +111,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
@@ -124,3 +120,11 @@ STATICFILES_DIRS = [
 ]
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = 'media/'
+
+MESSAGE_TAGS = {
+    constants.ERROR: 'alert-danger',
+    constants.WARNING: 'alert-warning',
+    constants.DEBUG: 'alert-info',
+    constants.SUCCESS: 'alert-success',
+    constants.INFO: 'alert-info',
+}
