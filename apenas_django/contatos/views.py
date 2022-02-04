@@ -21,3 +21,6 @@ def ver_contato(request, contato_id):
     return render(request, 'contatos/ver_contato.html', {
         "contato": contato
     })
+
+def busca(request):
+
