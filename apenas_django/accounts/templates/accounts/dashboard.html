@@ -1,4 +1,13 @@
 {%extends 'base.html'%}
+
+{%block 'titulo'%}
+Dashboard de {{user}} |
+{%endblock%}
+
 {%block 'content'%}
-Dashboard
+
+<h1 class="mt-3 mb-3">Olá lindo ser humaninho </h1>
+{%include 'parciais/messages.html'%}
+<p><FONT COLOR="#DB7093">Usuário Logado: {{user}}</FONT></p>
+
 {%endblock%}
