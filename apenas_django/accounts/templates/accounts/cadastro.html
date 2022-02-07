@@ -6,6 +6,7 @@
         {%include 'parciais/messages.html'%}
         {%csrf_token%}
         <div class="form-group">
+            <FONT COLOR="#DB7093">
             <label>Nome</label>
             <input type="text" name="nome" value="{{request.POST.nome}}" class="form-control">
         </div>
@@ -28,6 +29,7 @@
         <div class="form-group">
             <label>Repetir senha</label>
             <input type="text" name="senha2" class="form-control">
+            </FONT>
         </div>
         <button type="submit" class="btn btn-primary mt-3 mb-3">Submit</button>
     </form>
