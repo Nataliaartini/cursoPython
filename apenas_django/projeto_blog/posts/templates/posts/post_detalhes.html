@@ -2,7 +2,6 @@
 
 {%block content%}
 
-<div class="container">
     <div class="row pt-5">
         <div class="col-xl"></div>
         <div class="col-xl-8 text-center">
@@ -59,24 +58,24 @@
                 {%csrf_token%}
 <!--                <input type="hidden" name="csrfmiddlewaretoken"-->
 <!--                       value="MUiT5cD1u7raeEOr9w9srr4cbQkYc5OTRnWT1cZcIiYWXL8cJqmAl9bxFc7j26yn">-->
-                <table class="table">
+                {%for hidden_field in form.hidden_field%}
+                    {{hidden_field}}
+                {%endfor%}
 
-                    {{form}}
+                {%for visible_field in form.visible_field%}
+                <div class="form-group">
+                    {{visible_field.label_tag}} <br>
+                    {{visible_field}}
+                </div>
+                {%endfor%}
 
-                    <tr>
-                        <td colspan="2">
-                            {%include 'parciais/_messages.html'%}
-                            <input id="envia_comentario" type="submit" class="btn btn-primary"
-                                   value="Enviar">
-                        </td>
-                    </tr>
-                </table>
+                {%include 'parciais/_messages.html'%}
+                <input id="envia_comentario" type="submit" class="btn btn-primary" value="Enviar">
             </form>
 
 
         </div>
         <div class="col-xl"></div>
     </div>
-</div>
 
 {%endblock%}
