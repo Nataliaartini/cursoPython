@@ -16,6 +16,7 @@ class PostIndex(ListView):
 
     def get_queryset(self):
         qs = super().get_queryset()
+        qs = qs.select_related('categoria_post') #diminui numero de pesquisas realizadas para exibir posts
         qs = qs.order_by('-id').filter(publicado_post=True)
         qs = qs.annotate(
             numero_comentarios=Count(
@@ -24,7 +25,6 @@ class PostIndex(ListView):
                 )
             )
         )
-
         return qs
 
 
