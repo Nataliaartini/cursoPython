@@ -64,6 +64,7 @@
 
             {%for visible_field in form.visible_field%}
             <div class="form-group">
+                {{visible_field.errors}}
                 {{visible_field.label_tag}} <br>
                 {{visible_field}}
             </div>
