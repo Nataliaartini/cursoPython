@@ -3,6 +3,7 @@ from django.views.generic.list import ListView
 from django.views.generic.edit import UpdateView
 from .models import Post
 from django.db.models import Q, Count, Case, When
+from comentarios.forms import FormComentario
 
 class PostIndex(ListView):
     model = Post
@@ -24,10 +25,35 @@ class PostIndex(ListView):
         return qs
 
 class PostBusca(PostIndex):
-    pass
+    template_name = 'posts/post_busca.html'
+
+    def get_queryset(self):
+        qs = super().get_queryset()
+        termo = self.request.GET.get('termo')
+
+        if not termo:
+            return qs
+
+        qs = qs.filter(
+            Q(titulo_post__icontains=termo) | Q(excerto_post__icontains=termo) | Q(conteudo_post__icontains=termo) |
+            Q(autor_post__user_name__iexact=termo) | Q(categoria_post__nome_cat__iexact=termo)
+        )
+
+        return qs
 
 class PostCategoria(PostIndex):
+    template_name = 'posts/post_categoria.html'
+    
+    def get_queryset(self):
+        qs = super().get_queryset()
+        categoria = self.kwargs.get('categoria', None))
+        if not categoria:
+            return qs
 
+        qs = qs.filter(categoria_post__nome_cat__iexact=categoria)
+        return qs
 
 class PostDetalhes(UpdateView):
-    pass
+    template_name = 'posts/post_detalhes.html'
+    model = Post
+    form_class = FormComentario
