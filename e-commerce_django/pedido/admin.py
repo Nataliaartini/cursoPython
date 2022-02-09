@@ -8,9 +8,7 @@ class ItemPedidoInline(admin.TabularInline):
 
 
 class PedidoAdmin(admin.ModelAdmin):
-    inlines = [
-        ItemPedidoInline
-    ]
+    inlines = [ItemPedidoInline]
 
 
 admin.site.register(models.Pedido, PedidoAdmin)
