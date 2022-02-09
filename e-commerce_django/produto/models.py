@@ -8,8 +8,8 @@ from utils import utils
 
 class Produto(models.Model):
     nome = models.CharField(max_length=255)
-    descricao_curta = models.TextField(max_length=255)
-    descricao_longa = models.TextField()
+    descricao_curta = models.TextField(max_length=180)
+    descricao_longa = models.TextField(max_length=640)
     imagem = models.ImageField(
         upload_to='produto_imagens/%Y/%m/', blank=True, null=True)
     slug = models.SlugField(unique=True, blank=True, null=True)
