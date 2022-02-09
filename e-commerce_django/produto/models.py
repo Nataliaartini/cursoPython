@@ -49,7 +49,7 @@ class Produto(models.Model):
         new_img.save(
             img_full_path,
             optimize=True,
-            quality=50
+            quality=60
         )
 
     def save(self, *args, **kwargs):
