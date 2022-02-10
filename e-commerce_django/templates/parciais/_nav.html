@@ -1,7 +1,7 @@
 {% load omfilters %}
 
 <nav class="navbar navbar-dark bg-primary navbar-expand-lg">
-    <a class="navbar-brand" href="{% url 'produto:lista' %}">E-commerce</a>
+    <a class="navbar-brand" href="{% url 'produto:lista' %}">site muito legal</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -49,9 +49,10 @@
 
         </ul>
         <form class="form-inline my-2 my-lg-0" method="GET" action="{% url 'produto:busca' %}">
-            <input name="termo" value="{{ request.GET.termo }}" class="form-control mr-sm-2" type="search"
+            <input name="termo" value="{{ request.GET.termo }}" class="form-control mr-sm-3" type="search"
                 placeholder="Busca" aria-label="Busca">
-            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Busca</button>
+            <button style="background-color:#ADD8E6; color:#696969; border-color:transparent"
+                    class="btn btn-secondary my-2 my-sm-0 mr-2" type="submit">Busca</button>
         </form>
     </div>
 </nav>
