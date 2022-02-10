@@ -46,10 +46,7 @@ class DetalheProduto(DetailView):
 
 class AdicionarAoCarrinho(View):
     def get(self, *args, **kwargs):
-        http_referer = self.request.META.get(
-            'HTTP_REFERER',
-            reverse('produto:lista')
-        )
+        http_referer = self.request.META.get('HTTP_REFERER', reverse('produto:lista'))
         variacao_id = self.request.GET.get('vid')
 
         if not variacao_id:
@@ -94,17 +91,13 @@ class AdicionarAoCarrinho(View):
             if variacao_estoque < quantidade_carrinho:
                 messages.warning(
                     self.request,
-                    f'Estoque insuficiente para {quantidade_carrinho}x no '
-                    f'produto "{produto_nome}". Adicionamos {variacao_estoque}x '
-                    f'no seu carrinho.'
-                )
+                    f'Estoque insuficiente para {quantidade_carrinho}x no produto "{produto_nome}". '
+                    f'Adicionamos {variacao_estoque}x no seu carrinho.')
                 quantidade_carrinho = variacao_estoque
 
             carrinho[variacao_id]['quantidade'] = quantidade_carrinho
-            carrinho[variacao_id]['preco_quantitativo'] = preco_unitario * \
-                quantidade_carrinho
-            carrinho[variacao_id]['preco_quantitativo_promocional'] = preco_unitario_promocional * \
-                quantidade_carrinho
+            carrinho[variacao_id]['preco_quantitativo'] = preco_unitario * quantidade_carrinho
+            carrinho[variacao_id]['preco_quantitativo_promocional'] = preco_unitario_promocional * quantidade_carrinho
         else:
             carrinho[variacao_id] = {
                 'produto_id': produto_id,
