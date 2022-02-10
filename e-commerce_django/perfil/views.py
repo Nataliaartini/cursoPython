@@ -38,12 +38,8 @@ class BasePerfil(View):
             }
         else:
             self.contexto = {
-                'userform': forms.UserForm(
-                    data=self.request.POST or None
-                ),
-                'perfilform': forms.PerfilForm(
-                    data=self.request.POST or None
-                )
+                'userform': forms.UserForm(data=self.request.POST or None),
+                'perfilform': forms.PerfilForm(data=self.request.POST or None)
             }
 
         self.userform = self.contexto['userform']
@@ -52,8 +48,7 @@ class BasePerfil(View):
         if self.request.user.is_authenticated:
             self.template_name = 'perfil/atualizar.html'
 
-        self.renderizar = render(
-            self.request, self.template_name, self.contexto)
+        self.renderizar = render(self.request, self.template_name, self.contexto)
 
     def get(self, *args, **kwargs):
         return self.renderizar
