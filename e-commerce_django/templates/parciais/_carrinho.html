@@ -28,10 +28,11 @@
             <td>{{ linha.variacao_nome }}</td>
             <td>
                 {{ linha.quantidade }} x
+
                 {% if linha.preco_unitario_promocional %}
-                {{ linha.preco_unitario_promocional }}
+                    {{ linha.preco_unitario_promocional }}
                 {% else %}
-                {{ linha.preco_unitario }}
+                    {{ linha.preco_unitario }}
                 {% endif %}
             </td>
 
