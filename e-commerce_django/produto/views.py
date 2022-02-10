@@ -53,10 +53,7 @@ class AdicionarAoCarrinho(View):
         variacao_id = self.request.GET.get('vid')
 
         if not variacao_id:
-            messages.error(
-                self.request,
-                'Produto não existe'
-            )
+            messages.error(self.request, 'Produto não existe')
             return redirect(http_referer)
 
         variacao = get_object_or_404(models.Variacao, id=variacao_id)
