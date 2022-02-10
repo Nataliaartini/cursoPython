@@ -56,7 +56,6 @@ class AdicionarAoCarrinho(View):
         variacao = get_object_or_404(models.Variacao, id=variacao_id)
         variacao_estoque = variacao.estoque
         produto = variacao.produto
-
         produto_id = produto.id
         produto_nome = produto.nome
         variacao_nome = variacao.nome or ''
@@ -72,10 +71,7 @@ class AdicionarAoCarrinho(View):
             imagem = ''
 
         if variacao.estoque < 1:
-            messages.error(
-                self.request,
-                'Estoque insuficiente'
-            )
+            messages.error(self.request, 'Estoque insuficiente')
             return redirect(http_referer)
 
         if not self.request.session.get('carrinho'):
@@ -98,6 +94,7 @@ class AdicionarAoCarrinho(View):
             carrinho[variacao_id]['quantidade'] = quantidade_carrinho
             carrinho[variacao_id]['preco_quantitativo'] = preco_unitario * quantidade_carrinho
             carrinho[variacao_id]['preco_quantitativo_promocional'] = preco_unitario_promocional * quantidade_carrinho
+
         else:
             carrinho[variacao_id] = {
                 'produto_id': produto_id,
@@ -117,8 +114,7 @@ class AdicionarAoCarrinho(View):
 
         messages.success(
             self.request,
-            f'Produto {produto_nome} {variacao_nome} adicionado ao seu '
-            f'carrinho {carrinho[variacao_id]["quantidade"]}x.'
+            f'Produto {produto_nome} {variacao_nome} adicionado ao seu carrinho {carrinho[variacao_id]["quantidade"]}x.'
         )
 
         return redirect(http_referer)
