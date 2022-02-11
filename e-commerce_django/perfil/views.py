@@ -105,11 +105,7 @@ class Criar(BasePerfil):
             perfil.save()
 
         if password:
-            autentica = authenticate(
-                self.request,
-                username=usuario,
-                password=password
-            )
+            autentica = authenticate(self.request, username=usuario, password=password)
 
             if autentica:
                 login(self.request, user=usuario)
