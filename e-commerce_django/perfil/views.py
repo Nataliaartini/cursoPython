@@ -21,9 +21,7 @@ class BasePerfil(View):
         self.perfil = None
 
         if self.request.user.is_authenticated:
-            self.perfil = models.Perfil.objects.filter(
-                usuario=self.request.user
-            ).first()
+            self.perfil = models.Perfil.objects.filter(usuario=self.request.user).first()
 
             self.contexto = {
                 'userform': forms.UserForm(
