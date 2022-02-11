@@ -142,14 +142,10 @@ class Login(View):
             )
             return redirect('perfil:criar')
 
-        usuario = authenticate(
-            self.request, username=username, password=password)
+        usuario = authenticate(self.request, username=username, password=password)
 
         if not usuario:
-            messages.error(
-                self.request,
-                'Usuário ou senha inválidos.'
-            )
+            messages.error(self.request, 'Usuário ou senha inválidos.')
             return redirect('perfil:criar')
 
         login(self.request, user=usuario)
