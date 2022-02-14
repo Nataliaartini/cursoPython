@@ -65,10 +65,7 @@ class SalvarPedido(View):
                                     'verifique quais produtos foram afetados a seguir.'
 
             if error_msg_estoque:
-                messages.error(
-                    self.request,
-                    error_msg_estoque
-                )
+                messages.error(self.request, error_msg_estoque)
 
                 self.request.session.save()
                 return redirect('produto:carrinho')
