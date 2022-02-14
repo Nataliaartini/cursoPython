@@ -64,12 +64,6 @@ class SalvarPedido(View):
                                     'Reduzimos a quantidade desses produtos. Por favor, ' \
                                     'verifique quais produtos foram afetados a seguir.'
 
-            if error_msg_estoque:
-                messages.error(self.request, error_msg_estoque)
-
-                self.request.session.save()
-                return redirect('produto:carrinho')
-
         qtd_total_carrinho = utils.cart_total_qtd(carrinho)
         valor_total_carrinho = utils.cart_totals(carrinho)
 
@@ -82,8 +76,7 @@ class SalvarPedido(View):
 
         pedido.save()
 
-        ItemPedido.objects.bulk_create(
-            [
+        ItemPedido.objects.bulk_create([
                 ItemPedido(
                     pedido=pedido,
                     produto=v['produto_nome'],
@@ -95,8 +88,7 @@ class SalvarPedido(View):
                     quantidade=v['quantidade'],
                     imagem=v['imagem'],
                 ) for v in carrinho.values()
-            ]
-        )
+            ])
 
         del self.request.session['carrinho']
 
