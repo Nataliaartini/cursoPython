@@ -51,7 +51,7 @@ class SalvarPedido(View):
         carrinho_variacao_ids = [v for v in carrinho]
         bd_variacoes = list(
             Variacao.objects.select_related('produto')
-            .filter(id__in=carrinho_variacao_ids)
+                .filter(id__in=carrinho_variacao_ids)
         )
 
         for variacao in bd_variacoes:
@@ -68,12 +68,12 @@ class SalvarPedido(View):
                 carrinho[vid]['quantidade'] = estoque
                 carrinho[vid]['preco_quantitativo'] = estoque * preco_unt
                 carrinho[vid]['preco_quantitativo_promocional'] = estoque * \
-                    preco_unt_promo
+                                                                  preco_unt_promo
 
-                error_msg_estoque = 'Estoque insuficiente para alguns '\
-                    'produtos do seu carrinho. '\
-                    'Reduzimos a quantidade desses produtos. Por favor, '\
-                    'verifique quais produtos foram afetados a seguir.'
+                error_msg_estoque = 'Estoque insuficiente para alguns ' \
+                                    'produtos do seu carrinho. ' \
+                                    'Reduzimos a quantidade desses produtos. Por favor, ' \
+                                    'verifique quais produtos foram afetados a seguir.'
 
             if error_msg_estoque:
                 messages.error(
@@ -114,14 +114,7 @@ class SalvarPedido(View):
 
         del self.request.session['carrinho']
 
-        return redirect(
-            reverse(
-                'pedido:pagar',
-                kwargs={
-                    'pk': pedido.pk
-                }
-            )
-        )
+        return redirect(reverse('pedido:pagar', kwargs={'pk': pedido.pk}))
 
 
 class Detalhe(DispatchLoginRequiredMixin, DetailView):
