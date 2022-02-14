@@ -34,10 +34,7 @@ class SalvarPedido(View):
 
     def get(self, *args, **kwargs):
         if not self.request.user.is_authenticated:
-            messages.error(
-                self.request,
-                'Você precisa fazer login.'
-            )
+            messages.error(self.request, 'Você precisa fazer login.')
             return redirect('perfil:criar')
 
         if not self.request.session.get('carrinho'):
