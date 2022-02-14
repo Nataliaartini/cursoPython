@@ -43,10 +43,7 @@ class SalvarPedido(View):
 
         carrinho = self.request.session.get('carrinho')
         carrinho_variacao_ids = [v for v in carrinho]
-        bd_variacoes = list(
-            Variacao.objects.select_related('produto')
-                .filter(id__in=carrinho_variacao_ids)
-        )
+        bd_variacoes = list(Variacao.objects.select_related('produto').filter(id__in=carrinho_variacao_ids))
 
         for variacao in bd_variacoes:
             vid = str(variacao.id)
@@ -61,11 +58,9 @@ class SalvarPedido(View):
             if estoque < qtd_carrinho:
                 carrinho[vid]['quantidade'] = estoque
                 carrinho[vid]['preco_quantitativo'] = estoque * preco_unt
-                carrinho[vid]['preco_quantitativo_promocional'] = estoque * \
-                                                                  preco_unt_promo
+                carrinho[vid]['preco_quantitativo_promocional'] = estoque * preco_unt_promo
 
-                error_msg_estoque = 'Estoque insuficiente para alguns ' \
-                                    'produtos do seu carrinho. ' \
+                error_msg_estoque = 'Estoque insuficiente para alguns produtos do seu carrinho. ' \
                                     'Reduzimos a quantidade desses produtos. Por favor, ' \
                                     'verifique quais produtos foram afetados a seguir.'
 
