@@ -14,7 +14,7 @@ def contato(request):
     return render(request, "contato.html")
 
 def produto(request, pk): #pk que é passado no url de acesso a pagina produto urlpattern
-    product = Produto.objects.get(pk=pk)
+    product = Produto.objects.get(id=pk) #id é o que está no index, quero que o id seja igual o pk que passei para Produto em urlpattern
     context = {
         'produto': product
     }
