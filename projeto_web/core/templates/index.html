@@ -1,12 +1,15 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>sai daqui</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>amo aprender</title>
 </head>
 <body>
-    <h1>é sério! saia já daqui</h1>
-    <h2>{{curso}}</h2>
+    <h1>OK, seja bem vindo ao meu aprendizado web...</h1>
+    <img src="{%static 'images/frontend.png'%}"/>
+   <h2>{{curso}}</h2> <!-- puxa de views def index, variavel curso-->
 
     <table>
         <thead>
