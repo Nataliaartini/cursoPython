@@ -1,0 +1,12 @@
+body{
+    background-color: #2E2E2E; !important;
+    color: lightcoral;
+}
+a{
+    color: lightblue;
+}
+img{
+    width: 150px;
+    height: 150px;
+    margin-left: 150px;
+}

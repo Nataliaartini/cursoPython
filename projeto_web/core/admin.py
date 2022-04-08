@@ -5,6 +5,9 @@ from .models import Produto, Cliente
 class ProdutoAdmin(admin.ModelAdmin):
     list_display = ('nome', 'preco', 'estoque', 'descricao')
 
+class ClienteAdmin(admin.ModelAdmin):
+    list_display = ('nome', 'email', 'data_cadastro')
+
 #para puxar a classe que eu defini o que quero ver no admin eu passo ela como parametro no register do produto
 admin.site.register(Produto, ProdutoAdmin)
-admin.site.register(Cliente)
+admin.site.register(Cliente, ClienteAdmin)
