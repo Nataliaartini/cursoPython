@@ -5,6 +5,7 @@ class Produto(models.Model):
     nome = models.CharField("Nome", max_length=100)
     preco = models.FloatField("Preco")
     estoque = models.IntegerField("estoque inteiro apenas")
+    descricao = models.TextField("Descrição", blank=True, null=True)
 
     def __str__(self):
         return self.nome

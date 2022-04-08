@@ -3,7 +3,7 @@ from .models import Produto, Cliente
 
 #aqui estou criando o modo como eu quero ver meu produto no admin
 class ProdutoAdmin(admin.ModelAdmin):
-    list_display = ('nome', 'preco', 'estoque')
+    list_display = ('nome', 'preco', 'estoque', 'descricao')
 
 #para puxar a classe que eu defini o que quero ver no admin eu passo ela como parametro no register do produto
 admin.site.register(Produto, ProdutoAdmin)

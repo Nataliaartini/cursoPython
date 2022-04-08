@@ -6,33 +6,34 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <title>amo aprender</title>
 </head>
-<body>
-    <h1>OK, seja bem vindo ao meu aprendizado web...</h1>
-    <img src="{%static 'images/frontend.png'%}"/>
-   <h2>{{curso}}</h2> <!-- puxa de views def index, variavel curso-->
+    <body>
+        <div style="text-align: center;">
+        <h1>OK, seja bem vindo ao meu aprendizado web...</h1>
+        <img src="{%static 'images/frontend.png'%}"/>
+       <h2>{{curso}}</h2> <!-- puxa de views def index, variavel curso-->
 
-    <table>
-        <thead>
-        <tr>
-            <th>Produto</th>
-            <th>Preço</th>
-            <th>Estoque</th>
-        </tr>
-        </thead>
-        <tbody>
-            {% for produto in produtos %}
-            <tr align="center">
-                <td> <a href="{% url 'produto' produto.id %}">{{  produto.nome }}</a> </td>
-                <td>{{  produto.preco }}</td>
-                <td>{{  produto.estoque }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+        <table align="center">
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Preço</th>
+                    <th>Estoque</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for produto in produtos %}
+                <tr align="center">
+                    <td> <a href="{% url 'produto' produto.id %}">{{  produto.nome }}</a> </td>
+                    <td>{{  produto.preco }}</td>
+                    <td>{{  produto.estoque }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
 
-    <button onclick="coisa_legal();">Surpreenda-se!</button>
+        <button onclick="coisa_legal();">Surpreenda-se!</button>
 
-    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
 
-</body>
+    </body>
 </html>

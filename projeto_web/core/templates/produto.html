@@ -1,29 +1,20 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <title>Produto</title>
 </head>
 <body>
-
-    <h1>Produto</h1>
-
-    <table>
-        <thead>
-        <tr>
-            <th>Produto</th>
-            <th>Preço</th>
-            <th>Estoque</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr align="center">
-            <td> <a href="{% url 'index' %}">{{  produto.nome }}</a> </td>
-            <td>{{  produto.preco }}</td>
-            <td>{{  produto.estoque }}</td>
-        </tr>
-        </tbody>
-    </table>
-
+    <center>
+        <h1>Produto</h1>
+                <div class="col-md-6">
+                    <h2>{{ produto.nome }}</h2>
+                    <p>{{ produto.descricao }}</p>
+                    <p>R$ {{ produto.preco }}</p>
+                </div>
+            </div>
+        </div>
 </body>
 </html>
