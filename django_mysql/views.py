@@ -2,12 +2,12 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'templates/index.html')
+    return render(request, 'index.html')
 
 
 def contact(request):
-    return render(request, 'templates/contact.html')
+    return render(request, 'contact.html')
 
 
 def product(request):
-    return render(request, 'templates/product.html')
+    return render(request, 'product.html')

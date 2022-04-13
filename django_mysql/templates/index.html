@@ -1,25 +1,12 @@
 <!Doctype>
 <html lang="en">
 <head>
-<title>{% if request.user.is_authenticated(): %}
-        print "Hello, " + request.user.username
-    {% else %}
-        print "Hello, Guest"
-    {% endif %}
+<title>
+        asdas
 </title>
 </head>
 <body>
-{% if request.user.is_authenticated() %}
-    <p>Hello, {{ request.user.username }}</p>
-    <p>You are logged in.</p>
-    <p>
-        <a href="{% url 'logout' %}">Logout</a>
-    </p>
-{% else %}
-    <p>You are not logged in.</p>
-    <p>
-        <a href="{% url 'login' %}">Login</a>
-    </p>
-{% endif %}
+        <p>
+            asdasd</p>
 </body>
 </html>
